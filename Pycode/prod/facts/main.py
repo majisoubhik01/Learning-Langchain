@@ -6,11 +6,11 @@ load_dotenv()
 
 text_splitter = CharacterTextSplitter(
     separator="\n",
-    chunk_size=10,
+    chunk_size=200,
     chunk_overlap=0
 )
 
-loader = TextLoader("c:/Users/soubhik.maji/OneDrive - Subex Limited/Desktop/Courses/Langchain GPT/Pycode/prod/facts/facts.txt")
+loader = TextLoader("facts.txt")
 docs = loader.load_and_split(
     text_splitter=text_splitter
 )
